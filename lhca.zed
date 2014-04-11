@@ -1,0 +1,564 @@
+(bitBack) bit0 bit1 byte pchar char char char
+comment:
+#true
+(004) "bitBack" bit0 bit1 byte
+
+(bitBackwardCaseOneFalse) byte pchar char
+comment:
+#true
+(002) "bitBackwardCaseOneFalse" byte
+
+(bitBackwardCaseOneTrue) byte pchar char
+comment:
+#true
+(002) "bitBackwardCaseOneTrue" byte
+
+(bitBackwardCaseTwoFalseFalse) byte pchar char
+comment:
+#true
+(002) "bitBackwardCaseTwoFalseFalse" byte
+
+(bitBackwardCaseTwoFalseTrue) byte pchar char
+comment:
+#true
+(002) "bitBackwardCaseTwoFalseTrue" byte
+
+(bitBackwardCaseTwoTrueFalse) byte pchar char
+comment:
+#true
+(002) "bitBackwardCaseTwoTrueFalse" byte
+
+(bitBackwardCaseTwoTrueTrue) byte pchar char
+comment:
+#true
+(002) "bitBackwardCaseTwoTrueTrue" byte
+
+(bitRule) rule one two three pchar char char char char
+comment:
+rule
+(bitRuleOneFifty) one two three
+
+(bitRule) rule one two three pchar char char char char
+comment:
+#true
+(bitRuleNinety) one two three
+
+(bitRuleNinety) one two three pchar char char char
+comment:
+#true
+(bitXor) one three
+
+(bitRuleOneFifty) one two three pchar char char char
+comment:
+#true
+(bitXor) two (bitXor) one three
+
+(bitsBackwardCaseOne) bit bits pcharP char charP
+comment:
+#true
+(bitsBackwardCaseOne1) bit bits (charArrayNew) 9
+
+(bitsBackwardCaseOne1) bit input output pcharP char charP charP
+comment:
+#true
+(bitsBackwardCaseOne1a) input (charArraySet) 1 bit (charArraySet) 2 (bitRule) #false 0 bit (charArrayRef) 1 input output
+
+(bitsBackwardCaseOne1a) input output pcharP charP charP
+comment:
+#true
+(bitsBackwardCaseOne1b) input (charArraySet) 3 (bitRule) #false (charArrayRef) 1 output (charArrayRef) 2 output (charArrayRef) 2 input output
+
+(bitsBackwardCaseOne1b) input output pcharP charP charP
+comment:
+#true
+(bitsBackwardCaseOne1c) input (charArraySet) 4 (bitRule) #true (charArrayRef) 2 output (charArrayRef) 3 output (charArrayRef) 3 input output
+
+(bitsBackwardCaseOne1c) input output pcharP charP charP
+comment:
+#true
+(bitsBackwardCaseOne1d) input (charArraySet) 5 (bitRule) #false (charArrayRef) 3 output (charArrayRef) 4 output (charArrayRef) 4 input output
+
+(bitsBackwardCaseOne1d) input output pcharP charP charP
+comment:
+#true
+(bitsBackwardCaseOne1e) input (charArraySet) 6 (bitRule) #true (charArrayRef) 4 output (charArrayRef) 5 output (charArrayRef) 5 input output
+
+(bitsBackwardCaseOne1e) input output pcharP charP charP
+comment:
+#true
+(bitsBackwardCaseOne1f) input (charArraySet) 7 (bitRule) #false (charArrayRef) 5 output (charArrayRef) 6 output (charArrayRef) 6 input output
+
+(bitsBackwardCaseOne1f) input output pcharP charP charP
+comment:
+#true
+(bitsBackwardCaseOne1g) input (charArraySet) 8 (bitRule) #false (charArrayRef) 6 output (charArrayRef) 7 output (charArrayRef) 7 input output
+
+(bitsBackwardCaseOne1g) input output pcharP charP charP
+comment:
+#true
+(charArraySet) 9 (bitRule) #false (charArrayRef) 7 output (charArrayRef) 8 output (charArrayRef) 8 input output
+
+(bitsBackwardCaseOneFalse) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbitBackwardCaseOneFalse" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(bitsBackwardCaseOneTrue) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbitBackwardCaseOneTrue" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(bitsBackwardCaseTwo) bit1 bit2 bits pcharP char char charP
+comment:
+#true
+(bitsBackwardCaseTwo1) bit1 bit2 bits (charArrayNew) 9
+
+(bitsBackwardCaseTwo1) bit1 bit2 input output pcharP char char charP charP
+comment:
+#true
+(bitsBackwardCaseTwo1a) input (charArraySet) 1 bit2 (charArraySet) 2 (bitRule) #false bit1 bit2 (charArrayRef) 1 input output
+
+(bitsBackwardCaseTwo1a) input output pcharP charP charP
+comment:
+#true
+(bitsBackwardCaseTwo1b) input (charArraySet) 3 (bitRule) #false (charArrayRef) 1 output (charArrayRef) 2 output (charArrayRef) 2 input output
+
+(bitsBackwardCaseTwo1b) input output pcharP charP charP
+comment:
+#true
+(bitsBackwardCaseTwo1c) input (charArraySet) 4 (bitRule) #false (charArrayRef) 2 output (charArrayRef) 3 output (charArrayRef) 3 input output
+
+(bitsBackwardCaseTwo1c) input output pcharP charP charP
+comment:
+#true
+(bitsBackwardCaseTwo1d) input (charArraySet) 5 (bitRule) #false (charArrayRef) 3 output (charArrayRef) 4 output (charArrayRef) 4 input output
+
+(bitsBackwardCaseTwo1d) input output pcharP charP charP
+comment:
+#true
+(bitsBackwardCaseTwo1e) input (charArraySet) 6 (bitRule) #false (charArrayRef) 4 output (charArrayRef) 5 output (charArrayRef) 5 input output
+
+(bitsBackwardCaseTwo1e) input output pcharP charP charP
+comment:
+#true
+(bitsBackwardCaseTwo1f) input (charArraySet) 7 (bitRule) #false (charArrayRef) 5 output (charArrayRef) 6 output (charArrayRef) 6 input output
+
+(bitsBackwardCaseTwo1f) input output pcharP charP charP
+comment:
+#true
+(bitsBackwardCaseTwo1g) input (charArraySet) 8 (bitRule) #false (charArrayRef) 6 output (charArrayRef) 7 output (charArrayRef) 7 input output
+
+(bitsBackwardCaseTwo1g) input output pcharP charP charP
+comment:
+#true
+(charArraySet) 9 (bitRule) #false (charArrayRef) 7 output (charArrayRef) 8 output (charArrayRef) 8 input output
+
+(bitsBackwardCaseTwoFalseFalse) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbitBackwardCaseTwoFalseFalse" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(bitsBackwardCaseTwoFalseTrue) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbitBackwardCaseTwoFalseTrue" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(bitsBackwardCaseTwoTrueFalse) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbitBackwardCaseTwoTrueFalse" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(bitsBackwardCaseTwoTrueTrue) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbitBackwardCaseTwoTrueTrue" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(bitsByte) byte pcharP char
+comment:
+#true
+(bitsByte1) byte 1
+
+(bitsByte1) byte count pcharP char char
+comment:
+"ZEDcount>8"
+(charArrayNew) 8
+
+(bitsByte1) byte count pcharP char char
+comment:
+"ZEDbyte>127"
+(charArraySet) count #true (bitsByte1) "ZEDbyte<<1" "ZEDcount+1"
+
+(bitsByte1) byte count pcharP char char
+comment:
+#true
+(charArraySet) count #false (bitsByte1) "ZEDbyte<<1" "ZEDcount+1"
+
+(bitsForwardCaseOne) leftBit rightBit bits pcharP char char charP
+comment:
+#true
+(charArraySet) 1 (bitRule) #false leftBit (charArrayRef) 1 bits (charArrayRef) 2 bits (charArraySet) 2 (bitRule) #false (charArrayRef) 1 bits (charArrayRef) 2 bits (charArrayRef) 3 bits (charArraySet) 3 (bitRule) #true (charArrayRef) 2 bits (charArrayRef) 3 bits (charArrayRef) 4 bits (charArraySet) 4 (bitRule) #false (charArrayRef) 3 bits (charArrayRef) 4 bits (charArrayRef) 5 bits (charArraySet) 5 (bitRule) #true (charArrayRef) 4 bits (charArrayRef) 5 bits (charArrayRef) 6 bits (charArraySet) 6 (bitRule) #false (charArrayRef) 5 bits (charArrayRef) 6 bits (charArrayRef) 7 bits (charArraySet) 7 (bitRule) #false (charArrayRef) 6 bits (charArrayRef) 7 bits (charArrayRef) 8 bits (charArraySet) 8 (bitRule) #false (charArrayRef) 7 bits (charArrayRef) 8 bits rightBit (charArrayNew) 8
+
+(bitsForwardCaseTwo) leftBit rightBit bits pcharP char char charP
+comment:
+#true
+(charArraySet) 1 (bitRule) #false leftBit (charArrayRef) 1 bits (charArrayRef) 2 bits (charArraySet) 2 (bitRule) #false (charArrayRef) 1 bits (charArrayRef) 2 bits (charArrayRef) 3 bits (charArraySet) 3 (bitRule) #false (charArrayRef) 2 bits (charArrayRef) 3 bits (charArrayRef) 4 bits (charArraySet) 4 (bitRule) #false (charArrayRef) 3 bits (charArrayRef) 4 bits (charArrayRef) 5 bits (charArraySet) 5 (bitRule) #false (charArrayRef) 4 bits (charArrayRef) 5 bits (charArrayRef) 6 bits (charArraySet) 6 (bitRule) #false (charArrayRef) 5 bits (charArrayRef) 6 bits (charArrayRef) 7 bits (charArraySet) 7 (bitRule) #false (charArrayRef) 6 bits (charArrayRef) 7 bits (charArrayRef) 8 bits (charArraySet) 8 (bitRule) #false (charArrayRef) 7 bits (charArrayRef) 8 bits rightBit (charArrayNew) 8
+
+(bitXor) one two pchar char char
+comment:
+#true
+"ZEDone!=ZEDtwo"
+
+(byteBack) bit0 bit1 byte pchar char char char
+comment:
+#true
+(004) "byteBack" bit0 bit1 byte
+
+(byteBackwardCaseOneFalse) byte pchar char
+comment:
+#true
+(002) "byteBackwardCaseOneFalse" byte
+
+(byteBackwardCaseOneTrue) byte pchar char
+comment:
+#true
+(002) "byteBackwardCaseOneTrue" byte
+
+(byteBackwardCaseTwoFalseFalse) byte pchar char
+comment:
+#true
+(002) "byteBackwardCaseTwoFalseFalse" byte
+
+(byteBackwardCaseTwoFalseTrue) byte pchar char
+comment:
+#true
+(002) "byteBackwardCaseTwoFalseTrue" byte
+
+(byteBackwardCaseTwoTrueFalse) byte pchar char
+comment:
+#true
+(002) "byteBackwardCaseTwoTrueFalse" byte
+
+(byteBackwardCaseTwoTrueTrue) byte pchar char
+comment:
+#true
+(002) "byteBackwardCaseTwoTrueTrue" byte
+
+(byteBits) bits pchar charP
+comment:
+#true
+(byteBits1) bits 0 1
+
+(byteBits1) bits byte count pchar charP char char
+comment:
+"ZEDcount==8"
+(charAdd) byte (charArrayRef) count bits
+
+(byteBits1) bits byte count pchar charP char char
+comment:
+#true
+(byteBits1) bits (charShiftLeft) (charAdd) byte (charArrayRef) count bits "ZEDcount+1"
+
+(byteEightForward) pchar
+comment:
+#true
+(byteTwoForward1) (byteSevenRef) (byteEightRef) 0
+
+(byteEightRef) pchar
+comment:
+#true
+(charArrayRef) 8 state
+
+(byteEightSet) character pcharP char
+comment:
+#true
+(charArraySet) 8 character state
+
+(byteFiveForward) pchar
+comment:
+#true
+(byteTwoForward1) (byteFourRef) (byteFiveRef) (byteSixRef)
+
+(byteFiveRef) pchar
+comment:
+#true
+(charArrayRef) 5 state
+
+(byteFiveSet) character pcharP char
+comment:
+#true
+(charArraySet) 5 character state
+
+(byteForwardCaseOneFalse) byte pchar char
+comment:
+#true
+(002) "byteForwardCaseOneFalse" byte
+
+(byteForwardCaseOneTrue) byte pchar char
+comment:
+#true
+(002) "byteForwardCaseOneTrue" byte
+
+(byteForwardCaseTwoFalseFalse) byte pchar char
+comment:
+#true
+(002) "byteForwardCaseTwoFalseFalse" byte
+
+(byteForwardCaseTwoFalseTrue) byte pchar char
+comment:
+#true
+(002) "byteForwardCaseTwoFalseTrue" byte
+
+(byteForwardCaseTwoTrueFalse) byte pchar char
+comment:
+#true
+(002) "byteForwardCaseTwoTrueFalse" byte
+
+(byteForwardCaseTwoTrueTrue) byte pchar char
+comment:
+#true
+(002) "byteForwardCaseTwoTrueTrue" byte
+
+(byteFourForward) pchar
+comment:
+#true
+(byteTwoForward1) (byteThreeRef) (byteFourRef) (byteFiveRef)
+
+(byteFourRef) pchar
+comment:
+#true
+(charArrayRef) 4 state
+
+(byteFourSet) character pcharP char
+comment:
+#true
+(charArraySet) 4 character state
+
+(byteOneForward) pchar
+comment:
+#true
+(byteOneForward1) (byteOneRef) (byteTwoRef)
+
+(byteOneForward1) one two pchar char char
+comment:
+"ZEDtwo>127"
+(charArrayRef) "ZEDone+1" byteTableForwardCaseOneTrue
+
+(byteOneForward1) one two pchar char char
+comment:
+#true
+(charArrayRef) "ZEDone+1" byteTableForwardCaseOneFalse
+
+(byteOneRef) pchar
+comment:
+#true
+(charArrayRef) 1 state
+
+(byteOneSet) character pcharP char
+comment:
+#true
+(charArraySet) 1 character state
+
+(bytesBackwardCaseOneFalse) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbyteBackwardCaseOneFalse" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(bytesBackwardCaseOneTrue) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbyteBackwardCaseOneTrue" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(bytesBackwardCaseTwoFalseFalse) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbyteBackwardCaseTwoFalseFalse" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(bytesBackwardCaseTwoFalseTrue) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbyteBackwardCaseTwoFalseTrue" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(bytesBackwardCaseTwoTrueFalse) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbyteBackwardCaseTwoTrueFalse" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(bytesBackwardCaseTwoTrueTrue) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbyteBackwardCaseTwoTrueTrue" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(byteSevenForward) pchar
+comment:
+#true
+(byteTwoForward1) (byteSixRef) (byteSevenRef) (byteEightRef)
+
+(byteSevenRef) pchar
+comment:
+#true
+(charArrayRef) 7 state
+
+(byteSevenSet) character pcharP char
+comment:
+#true
+(charArraySet) 7 character state
+
+(bytesForwardCaseOneFalse) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbyteForwardCaseOneFalse" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(bytesForwardCaseOneTrue) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbyteForwardCaseOneTrue" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(bytesForwardCaseTwoFalseFalse) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbyteForwardCaseTwoFalseFalse" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(bytesForwardCaseTwoFalseTrue) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbyteForwardCaseTwoFalseTrue" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(bytesForwardCaseTwoTrueFalse) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbyteForwardCaseTwoTrueFalse" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(bytesForwardCaseTwoTrueTrue) pcharP
+comment:
+#true
+(004) "charArrayMap" "&ZEDbyteForwardCaseTwoTrueTrue" 256 (charArrayPrepare) 256 (charArrayNew) 256
+
+(byteSixForward) pchar
+comment:
+#true
+(byteTwoForward1) (byteFiveRef) (byteSixRef) (byteSevenRef)
+
+(byteSixRef) pchar
+comment:
+#true
+(charArrayRef) 6 state
+
+(byteSixSet) character pcharP char
+comment:
+#true
+(charArraySet) 6 character state
+
+(bytesState) pcharP
+comment:
+#true
+(charArraySet) 1 #1 (charArraySet) 2 #2 (charArraySet) 3 #2 (charArraySet) 4 #7 (charArraySet) 5 #1 (charArraySet) 6 #9 (charArraySet) 7 #7 (charArraySet) 8 #6 (charArrayNew) 8
+
+(byteThreeForward) pchar
+comment:
+#true
+(byteTwoForward1) (byteTwoRef) (byteThreeRef) (byteFourRef)
+
+(byteThreeRef) pchar
+comment:
+#true
+(charArrayRef) 3 state
+
+(byteThreeSet) character pcharP char
+comment:
+#true
+(charArraySet) 3 character state
+
+(byteTwoForward) pchar
+comment:
+#true
+(byteTwoForward1) (byteOneRef) (byteTwoRef) (byteThreeRef)
+
+(byteTwoForward1) one two three pchar char char char
+comment:
+"ZEDone%2==1&&ZEDthree>127"
+(charArrayRef) "ZEDtwo+1" byteTableForwardCaseTwoTrueTrue
+
+(byteTwoForward1) one two three pchar char char char
+comment:
+"ZEDthree>127"
+(charArrayRef) "ZEDtwo+1" byteTableForwardCaseTwoFalseTrue
+
+(byteTwoForward1) one two three pchar char char char
+comment:
+"ZEDone%2==1"
+(charArrayRef) "ZEDtwo+1" byteTableForwardCaseTwoTrueFalse
+
+(byteTwoForward1) one two three pchar char char char
+comment:
+#true
+(charArrayRef) "ZEDtwo+1" byteTableForwardCaseTwoFalseFalse
+
+(byteTwoRef) pchar
+comment:
+#true
+(charArrayRef) 2 state
+
+(byteTwoSet) character pcharP char
+comment:
+#true
+(charArraySet) 2 character state
+
+(charAdd) one two pchar char char
+comment:
+#true
+"ZEDone+ZEDtwo"
+
+(charArrayNew) size pcharP longlong
+comment:
+#true
+(002) "charArrayNew" size
+
+(charArrayPrepare) size array pcharP longlong charP
+comment:
+"ZEDsize==0"
+array
+
+(charArrayPrepare) size array pcharP longlong charP
+comment:
+#true
+(charArrayPrepare) "ZEDsize-1" (charArraySet) size "ZEDsize-1" array
+
+(charArrayRef) index array pchar longlong charP
+comment:
+#true
+(003) "charArrayRef" index array
+
+(charArraySet) index character array pcharP longlong char charP
+comment:
+#true
+(004) "charArraySet" index character array
+
+(charShiftLeft) character pchar char
+comment:
+#true
+"ZEDcharacter<<1"
+
+(charTableBackward) byte table pchar char charP
+comment:
+#true
+(charArrayRef) (longlongAdd) 1 (longlongCastChar) byte table
+
+(lhcaBackward) char
+comment:
+#true
+(001) "lhcaBackward"
+
+(lhcaForward) char
+comment:
+#true
+(001) "lhcaForward"
+
+(longlongAdd) one two plonglong longlong longlong
+comment:
+#true
+"ZEDone+ZEDtwo"
+
+(longlongCastChar) character plonglong char
+comment:
+#true
+(002) "longlongCastChar" character
