@@ -475,7 +475,7 @@ comment:
 
 (byteTwoForward1) one two three pchar char char char
 comment:
-"ZEDone%2==1&&ZEDthree>127"
+"ZEDone%2&&ZEDthree>127"
 (charArrayRef) "ZEDtwo+1" byteTableForwardCaseTwoTrueTrue
 
 (byteTwoForward1) one two three pchar char char char
