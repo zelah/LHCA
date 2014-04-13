@@ -81,96 +81,15 @@ ZEDpchar byteForwardCaseTwoFalseFalse(ZEDchar byte){ZEDcharP before=ZEDbitsByte(
 ZEDpchar byteForwardCaseTwoFalseTrue(ZEDchar byte){ZEDcharP before=ZEDbitsByte(byte);ZEDcharP after=ZEDbitsForwardCaseTwo(0,1,before);ZEDchar result=ZEDbyteBits(after);free(before);free(after);return result;}
 ZEDpchar byteForwardCaseTwoTrueFalse(ZEDchar byte){ZEDcharP before=ZEDbitsByte(byte);ZEDcharP after=ZEDbitsForwardCaseTwo(1,0,before);ZEDchar result=ZEDbyteBits(after);free(before);free(after);return result;}
 ZEDpchar byteForwardCaseTwoTrueTrue(ZEDchar byte){ZEDcharP before=ZEDbitsByte(byte);ZEDcharP after=ZEDbitsForwardCaseTwo(1,1,before);ZEDchar result=ZEDbyteBits(after);free(before);free(after);return result;}
-ZEDpcharP charArrayMap(ZEDchar (*function)(ZEDchar),ZEDlonglong count,ZEDcharP array){if(count==0) return array; else charArrayMap(function,count-1,charArraySet(count,(*function)(charArrayRef(count,array)),array));}
+ZEDpcharP charArrayMap(ZEDchar (*function)(ZEDchar),ZEDlonglong count,ZEDcharP array){if(count==0) return array; else return charArrayMap(function,count-1,charArraySet(count,(*function)(charArrayRef(count,array)),array));}
 ZEDpcharP charArrayNew(ZEDlonglong size){return malloc(size*sizeof(char));}
 ZEDpchar charArrayRef(ZEDlonglong index , ZEDcharP array){return array[index-1];}
 ZEDpcharP charArraySet(ZEDlonglong index , ZEDchar character , ZEDcharP array){array[index-1]=character; return array;}
-ZEDpchar lhcaBackward(){
-ZEDchar bit0,bit1,bit2,bit3,bit4,bit5,bit6,bit7,bit8,byte1,byte2,byte3,byte4,byte5,byte6,byte7,byte8,result;
- 
-result=(ZEDstate[0]>127);
- 
-byte1=ZEDcharArrayRef(1+((ZEDlonglong)ZEDstate[0]),ZEDbyteTableBackwardCaseOneFalse);
- 
-bit1=ZEDcharArrayRef(1+((ZEDlonglong)ZEDstate[0]),ZEDbitTableBackwardCaseOneFalse);
- 
-bit0=(byte1%2);
-byte2=ZEDbyteBack(bit0,bit1,ZEDstate[1]);
-bit2=ZEDbitBack(bit0,bit1,ZEDstate[1]);
- 
-bit0=(byte2%2);
-byte3=ZEDbyteBack(bit0,bit2,ZEDstate[2]);
-bit3=ZEDbitBack(bit0,bit2,ZEDstate[2]);
- 
-bit0=(byte3%2);
-byte4=ZEDbyteBack(bit0,bit3,ZEDstate[3]);
-bit4=ZEDbitBack(bit0,bit3,ZEDstate[3]);
- 
-bit0=(byte4%2);
-byte5=ZEDbyteBack(bit0,bit4,ZEDstate[4]);
-bit5=ZEDbitBack(bit0,bit4,ZEDstate[4]);
- 
-bit0=(byte5%2);
-byte6=ZEDbyteBack(bit0,bit5,ZEDstate[5]);
-bit6=ZEDbitBack(bit0,bit5,ZEDstate[5]);
- 
-bit0=(byte6%2);
-byte7=ZEDbyteBack(bit0,bit6,ZEDstate[6]);
-bit7=ZEDbitBack(bit0,bit6,ZEDstate[6]);
- 
-bit0=(byte7%2);
-byte8=ZEDbyteBack(bit0,bit7,ZEDstate[7]);
-bit8=ZEDbitBack(bit0,bit7,ZEDstate[7]);
- 
-if(bit8)
-{
-byte1=ZEDcharArrayRef(1+((ZEDlonglong)ZEDstate[0]),ZEDbyteTableBackwardCaseOneTrue);
- 
-bit1=ZEDcharArrayRef(1+((ZEDlonglong)ZEDstate[0]),ZEDbitTableBackwardCaseOneTrue);
- 
-bit0=(byte1%2);
-byte2=ZEDbyteBack(bit0,bit1,ZEDstate[1]);
-bit2=ZEDbitBack(bit0,bit1,ZEDstate[1]);
- 
-bit0=(byte2%2);
-byte3=ZEDbyteBack(bit0,bit2,ZEDstate[2]);
-bit3=ZEDbitBack(bit0,bit2,ZEDstate[2]);
- 
-bit0=(byte3%2);
-byte4=ZEDbyteBack(bit0,bit3,ZEDstate[3]);
-bit4=ZEDbitBack(bit0,bit3,ZEDstate[3]);
- 
-bit0=(byte4%2);
-byte5=ZEDbyteBack(bit0,bit4,ZEDstate[4]);
-bit5=ZEDbitBack(bit0,bit4,ZEDstate[4]);
- 
-bit0=(byte5%2);
-byte6=ZEDbyteBack(bit0,bit5,ZEDstate[5]);
-bit6=ZEDbitBack(bit0,bit5,ZEDstate[5]);
- 
-bit0=(byte6%2);
-byte7=ZEDbyteBack(bit0,bit6,ZEDstate[6]);
-bit7=ZEDbitBack(bit0,bit6,ZEDstate[6]);
- 
-bit0=(byte7%2);
-byte8=ZEDbyteBack(bit0,bit7,ZEDstate[7]);
-bit8=ZEDbitBack(bit0,bit7,ZEDstate[7]);
-}
- 
-ZEDstate[0]=byte1;
-ZEDstate[1]=byte2;
-ZEDstate[2]=byte3;
-ZEDstate[3]=byte4;
-ZEDstate[4]=byte5;
-ZEDstate[5]=byte6;
-ZEDstate[6]=byte7;
-ZEDstate[7]=byte8;
-return result;
-}
+ZEDpchar lhcaBackward(){ZEDchar bit0,bit1,bit2,bit3,bit4,bit5,bit6,bit7,bit8,byte1,byte2,byte3,byte4,byte5,byte6,byte7,byte8,result;result=(ZEDstate[0]>127);byte1=ZEDcharArrayRef(1+((ZEDlonglong)ZEDstate[0]),ZEDbyteTableBackwardCaseOneFalse);bit1=ZEDcharArrayRef(1+((ZEDlonglong)ZEDstate[0]),ZEDbitTableBackwardCaseOneFalse);bit0=(byte1%2);byte2=ZEDbyteBack(bit0,bit1,ZEDstate[1]);bit2=ZEDbitBack(bit0,bit1,ZEDstate[1]);bit0=(byte2%2);byte3=ZEDbyteBack(bit0,bit2,ZEDstate[2]);bit3=ZEDbitBack(bit0,bit2,ZEDstate[2]);bit0=(byte3%2);byte4=ZEDbyteBack(bit0,bit3,ZEDstate[3]);bit4=ZEDbitBack(bit0,bit3,ZEDstate[3]);bit0=(byte4%2);byte5=ZEDbyteBack(bit0,bit4,ZEDstate[4]);bit5=ZEDbitBack(bit0,bit4,ZEDstate[4]);bit0=(byte5%2);byte6=ZEDbyteBack(bit0,bit5,ZEDstate[5]);bit6=ZEDbitBack(bit0,bit5,ZEDstate[5]);bit0=(byte6%2);byte7=ZEDbyteBack(bit0,bit6,ZEDstate[6]);bit7=ZEDbitBack(bit0,bit6,ZEDstate[6]);bit0=(byte7%2);byte8=ZEDbyteBack(bit0,bit7,ZEDstate[7]);bit8=ZEDbitBack(bit0,bit7,ZEDstate[7]);if(bit8){byte1=ZEDcharArrayRef(1+((ZEDlonglong)ZEDstate[0]),ZEDbyteTableBackwardCaseOneTrue);bit1=ZEDcharArrayRef(1+((ZEDlonglong)ZEDstate[0]),ZEDbitTableBackwardCaseOneTrue);bit0=(byte1%2);byte2=ZEDbyteBack(bit0,bit1,ZEDstate[1]);bit2=ZEDbitBack(bit0,bit1,ZEDstate[1]);bit0=(byte2%2);byte3=ZEDbyteBack(bit0,bit2,ZEDstate[2]);bit3=ZEDbitBack(bit0,bit2,ZEDstate[2]);bit0=(byte3%2);byte4=ZEDbyteBack(bit0,bit3,ZEDstate[3]);bit4=ZEDbitBack(bit0,bit3,ZEDstate[3]);bit0=(byte4%2);byte5=ZEDbyteBack(bit0,bit4,ZEDstate[4]);bit5=ZEDbitBack(bit0,bit4,ZEDstate[4]);bit0=(byte5%2);byte6=ZEDbyteBack(bit0,bit5,ZEDstate[5]);bit6=ZEDbitBack(bit0,bit5,ZEDstate[5]);bit0=(byte6%2);byte7=ZEDbyteBack(bit0,bit6,ZEDstate[6]);bit7=ZEDbitBack(bit0,bit6,ZEDstate[6]);bit0=(byte7%2);byte8=ZEDbyteBack(bit0,bit7,ZEDstate[7]);bit8=ZEDbitBack(bit0,bit7,ZEDstate[7]);}ZEDstate[0]=byte1;ZEDstate[1]=byte2;ZEDstate[2]=byte3;ZEDstate[3]=byte4;ZEDstate[4]=byte5;ZEDstate[5]=byte6;ZEDstate[6]=byte7;ZEDstate[7]=byte8;return result;}
 ZEDpchar lhcaForward(){ZEDchar one=ZEDbyteOneForward();ZEDchar two=ZEDbyteTwoForward();ZEDchar three=ZEDbyteThreeForward();ZEDchar four=ZEDbyteFourForward();ZEDchar five=ZEDbyteFiveForward();ZEDchar six=ZEDbyteSixForward();ZEDchar seven=ZEDbyteSevenForward();ZEDchar eight=ZEDbyteEightForward();ZEDbyteOneSet(one);ZEDbyteTwoSet(two);ZEDbyteThreeSet(three);ZEDbyteFourSet(four);ZEDbyteFiveSet(five);ZEDbyteSixSet(six);ZEDbyteSevenSet(seven);ZEDbyteEightSet(eight);return one>127;}
 ZEDplonglong longlongCastChar(ZEDchar character){return(ZEDlonglong)character;}
-ZEDpchar test1(ZEDint count){if(count==0) {return(0);} else{printf("%d",ZEDlhcaForward());test1(count-1);}}
-ZEDpchar test2(ZEDint count){if(count==0) {return(0);} else{printf("%d",ZEDlhcaBackward());test2(count-1);}}
+ZEDpchar test1(ZEDint count){if(count==0) {return(0);} else{printf("%d",ZEDlhcaForward());return test1(count-1);}}
+ZEDpchar test2(ZEDint count){if(count==0) {return(0);} else{printf("%d",ZEDlhcaBackward());return test2(count-1);}}
  
 int main(void) {
 ZEDbitTableBackwardCaseOneFalse=ZEDbitsBackwardCaseOneFalse();
