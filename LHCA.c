@@ -68,7 +68,7 @@ suchar byteForwardCaseTwoTrueTrue(uchar byte);
 sucharP ucharArrayMap(uchar (*function)(ZEDuchar),ulonglong count,ucharP array);
 suchar lhcaBackward();
 suchar lhcaForward();
-sulonglong ulonglongCastuchar(uchar character);
+sulonglong ulonglongCastUchar(uchar character);
 suchar test1(uint count);
 suchar test2(uint count);
 
@@ -97,7 +97,7 @@ suchar byteForwardCaseTwoTrueTrue(uchar byte){ucharP before=ZEDbitsByte(byte);uc
 sucharP ucharArrayMap(uchar (*function)(uchar),ulonglong count,ucharP array){if(count==0) return array; else return ucharArrayMap(function,count-1,ucharArraySet(count,(*function)(ucharArrayRef(count,array)),array));}
 suchar lhcaBackward(){uchar bit0,bit1,bit2,bit3,bit4,bit5,bit6,bit7,bit8,byte1,byte2,byte3,byte4,byte5,byte6,byte7,byte8,result;result=(ZEDstate[0]>127);byte1=ZEDucharArrayRef(1+((ZEDulonglong)ZEDstate[0]),ZEDbyteTableBackwardCaseOneFalse);bit1=ZEDucharArrayRef(1+((ZEDulonglong)ZEDstate[0]),ZEDbitTableBackwardCaseOneFalse);bit0=(byte1%2);byte2=ZEDbyteBack(bit0,bit1,ZEDstate[1]);bit2=ZEDbitBack(bit0,bit1,ZEDstate[1]);bit0=(byte2%2);byte3=ZEDbyteBack(bit0,bit2,ZEDstate[2]);bit3=ZEDbitBack(bit0,bit2,ZEDstate[2]);bit0=(byte3%2);byte4=ZEDbyteBack(bit0,bit3,ZEDstate[3]);bit4=ZEDbitBack(bit0,bit3,ZEDstate[3]);bit0=(byte4%2);byte5=ZEDbyteBack(bit0,bit4,ZEDstate[4]);bit5=ZEDbitBack(bit0,bit4,ZEDstate[4]);bit0=(byte5%2);byte6=ZEDbyteBack(bit0,bit5,ZEDstate[5]);bit6=ZEDbitBack(bit0,bit5,ZEDstate[5]);bit0=(byte6%2);byte7=ZEDbyteBack(bit0,bit6,ZEDstate[6]);bit7=ZEDbitBack(bit0,bit6,ZEDstate[6]);bit0=(byte7%2);byte8=ZEDbyteBack(bit0,bit7,ZEDstate[7]);bit8=ZEDbitBack(bit0,bit7,ZEDstate[7]);if(bit8){byte1=ZEDucharArrayRef(1+((ZEDulonglong)ZEDstate[0]),ZEDbyteTableBackwardCaseOneTrue);bit1=ZEDucharArrayRef(1+((ZEDulonglong)ZEDstate[0]),ZEDbitTableBackwardCaseOneTrue);bit0=(byte1%2);byte2=ZEDbyteBack(bit0,bit1,ZEDstate[1]);bit2=ZEDbitBack(bit0,bit1,ZEDstate[1]);bit0=(byte2%2);byte3=ZEDbyteBack(bit0,bit2,ZEDstate[2]);bit3=ZEDbitBack(bit0,bit2,ZEDstate[2]);bit0=(byte3%2);byte4=ZEDbyteBack(bit0,bit3,ZEDstate[3]);bit4=ZEDbitBack(bit0,bit3,ZEDstate[3]);bit0=(byte4%2);byte5=ZEDbyteBack(bit0,bit4,ZEDstate[4]);bit5=ZEDbitBack(bit0,bit4,ZEDstate[4]);bit0=(byte5%2);byte6=ZEDbyteBack(bit0,bit5,ZEDstate[5]);bit6=ZEDbitBack(bit0,bit5,ZEDstate[5]);bit0=(byte6%2);byte7=ZEDbyteBack(bit0,bit6,ZEDstate[6]);bit7=ZEDbitBack(bit0,bit6,ZEDstate[6]);bit0=(byte7%2);byte8=ZEDbyteBack(bit0,bit7,ZEDstate[7]);bit8=ZEDbitBack(bit0,bit7,ZEDstate[7]);}ZEDstate[0]=byte1;ZEDstate[1]=byte2;ZEDstate[2]=byte3;ZEDstate[3]=byte4;ZEDstate[4]=byte5;ZEDstate[5]=byte6;ZEDstate[6]=byte7;ZEDstate[7]=byte8;return result;}
 suchar lhcaForward(){uchar one=ZEDbyteOneForward();uchar two=ZEDbyteTwoForward();uchar three=ZEDbyteThreeForward();uchar four=ZEDbyteFourForward();uchar five=ZEDbyteFiveForward();uchar six=ZEDbyteSixForward();uchar seven=ZEDbyteSevenForward();uchar eight=ZEDbyteEightForward();ZEDbyteOneSet(one);ZEDbyteTwoSet(two);ZEDbyteThreeSet(three);ZEDbyteFourSet(four);ZEDbyteFiveSet(five);ZEDbyteSixSet(six);ZEDbyteSevenSet(seven);ZEDbyteEightSet(eight);return one>127;}
-sulonglong ulonglongCastuchar(uchar character){return(ZEDulonglong)character;}
+sulonglong ulonglongCastUchar(uchar character){return(ZEDulonglong)character;}
 suchar test1(uint count){if(count==0) {return(0);} else{printf("%d",ZEDlhcaForward());return test1(count-1);}}
 suchar test2(uint count){if(count==0) {return(0);} else{printf("%d",ZEDlhcaBackward());return test2(count-1);}}
  
