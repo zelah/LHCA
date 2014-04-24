@@ -541,7 +541,7 @@ comment:
 (ucharTableBackward) byte table suchar uchar ucharP
 comment:
 #true
-(ucharArrayRef) (ulonglongAdd) 1 (ulonglongCastuchar) byte table
+(ucharArrayRef) (ulonglongAdd) 1 (ulonglongCastUchar) byte table
  
 (lhcaBackward) uchar
 comment:
@@ -558,7 +558,7 @@ comment:
 #true
 "ZEDone+ZEDtwo"
  
-(ulonglongCastuchar) character sulonglong uchar
+(ulonglongCastUchar) character sulonglong uchar
 comment:
 #true
-(002) "ulonglongCastuchar" character
+(002) "ulonglongCastUchar" character
