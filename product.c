@@ -122,6 +122,8 @@ suchar test2(uint count){if(count==0) {return(0);} else{printf("%d",ZEDlhcaBackw
  
 int main() {
 lhcaInitialize();
+lhcaSeed('z','e','l','a','h','z','e','l');
+printf("%c%c%c%c%c%c%c%c",lhcaOne(),lhcaTwo(),lhcaThree(),lhcaFour(),lhcaFive(),lhcaSix(),lhcaSeven(),lhcaEight());
 test1(256*61);
 printf("\n\n\n");
 test2(256*61);
