@@ -24,7 +24,6 @@ DEFINE_ZED_TYPE(ulonglong)
 #define ZEDsulonglong static ulonglong
 #define ZEDsulonglongP static ulonglongP
  
- 
 sucharP ZEDbitTableBackwardCaseOneFalse;
 sucharP ZEDbitTableBackwardCaseOneTrue;
 sucharP ZEDbitTableBackwardCaseTwoFalseFalse;
@@ -109,22 +108,7 @@ uchar lhcaBackward(){uchar bit0,bit1,bit2,bit3,bit4,bit5,bit6,bit7,bit8,byte1,by
 uchar lhcaForward(){uchar one=ZEDbyteOneForward();uchar two=ZEDbyteTwoForward();uchar three=ZEDbyteThreeForward();uchar four=ZEDbyteFourForward();uchar five=ZEDbyteFiveForward();uchar six=ZEDbyteSixForward();uchar seven=ZEDbyteSevenForward();uchar eight=ZEDbyteEightForward();ZEDbyteOneSet(one);ZEDbyteTwoSet(two);ZEDbyteThreeSet(three);ZEDbyteFourSet(four);ZEDbyteFiveSet(five);ZEDbyteSixSet(six);ZEDbyteSevenSet(seven);ZEDbyteEightSet(eight);return one>127;}
 uchar lhcaInitialize(){ZEDbitTableBackwardCaseOneFalse=ZEDbitsBackwardCaseOneFalse();
 ZEDbitTableBackwardCaseOneTrue=ZEDbitsBackwardCaseOneTrue();
-ZEDbitTableBackwardCaseTwoFalseFalse=ZEDbitsBackwardCaseTwoFalseFalse();
-ZEDbitTableBackwardCaseTwoFalseTrue=ZEDbitsBackwardCaseTwoFalseTrue();
-ZEDbitTableBackwardCaseTwoTrueFalse=ZEDbitsBackwardCaseTwoTrueFalse();
-ZEDbitTableBackwardCaseTwoTrueTrue=ZEDbitsBackwardCaseTwoTrueTrue();
-ZEDbyteTableBackwardCaseOneFalse=ZEDbytesBackwardCaseOneFalse();
-ZEDbyteTableBackwardCaseOneTrue=ZEDbytesBackwardCaseOneTrue();
-ZEDbyteTableBackwardCaseTwoFalseFalse=ZEDbytesBackwardCaseTwoFalseFalse();
-ZEDbyteTableBackwardCaseTwoFalseTrue=ZEDbytesBackwardCaseTwoFalseTrue();
-ZEDbyteTableBackwardCaseTwoTrueFalse=ZEDbytesBackwardCaseTwoTrueFalse();
-ZEDbyteTableBackwardCaseTwoTrueTrue=ZEDbytesBackwardCaseTwoTrueTrue();
-ZEDbyteTableForwardCaseOneFalse=ZEDbytesForwardCaseOneFalse();
-ZEDbyteTableForwardCaseOneTrue=ZEDbytesForwardCaseOneTrue();
-ZEDbyteTableForwardCaseTwoFalseFalse=ZEDbytesForwardCaseTwoFalseFalse();
-ZEDbyteTableForwardCaseTwoFalseTrue=ZEDbytesForwardCaseTwoFalseTrue();
-ZEDbyteTableForwardCaseTwoTrueFalse=ZEDbytesForwardCaseTwoTrueFalse();
-ZEDbyteTableForwardCaseTwoTrueTrue=ZEDbytesForwardCaseTwoTrueTrue();
+ZEDbitTableBackwardCaseTwoFalseFalse=ZEDbitsBackwardCaseTwoFalseFalse();ZEDbitTableBackwardCaseTwoFalseTrue=ZEDbitsBackwardCaseTwoFalseTrue();ZEDbitTableBackwardCaseTwoTrueFalse=ZEDbitsBackwardCaseTwoTrueFalse();ZEDbitTableBackwardCaseTwoTrueTrue=ZEDbitsBackwardCaseTwoTrueTrue();ZEDbyteTableBackwardCaseOneFalse=ZEDbytesBackwardCaseOneFalse();ZEDbyteTableBackwardCaseOneTrue=ZEDbytesBackwardCaseOneTrue();ZEDbyteTableBackwardCaseTwoFalseFalse=ZEDbytesBackwardCaseTwoFalseFalse();ZEDbyteTableBackwardCaseTwoFalseTrue=ZEDbytesBackwardCaseTwoFalseTrue();ZEDbyteTableBackwardCaseTwoTrueFalse=ZEDbytesBackwardCaseTwoTrueFalse();ZEDbyteTableBackwardCaseTwoTrueTrue=ZEDbytesBackwardCaseTwoTrueTrue();ZEDbyteTableForwardCaseOneFalse=ZEDbytesForwardCaseOneFalse();ZEDbyteTableForwardCaseOneTrue=ZEDbytesForwardCaseOneTrue();ZEDbyteTableForwardCaseTwoFalseFalse=ZEDbytesForwardCaseTwoFalseFalse();ZEDbyteTableForwardCaseTwoFalseTrue=ZEDbytesForwardCaseTwoFalseTrue();ZEDbyteTableForwardCaseTwoTrueFalse=ZEDbytesForwardCaseTwoTrueFalse();ZEDbyteTableForwardCaseTwoTrueTrue=ZEDbytesForwardCaseTwoTrueTrue();
 ZEDstate=ZEDbytesState();}
 uchar lhcaOne(){return ZEDstate[0];}
 uchar lhcaTwo(){return ZEDstate[1];}
