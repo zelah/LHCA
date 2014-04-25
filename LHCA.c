@@ -66,14 +66,24 @@ suchar byteForwardCaseTwoFalseTrue(uchar byte);
 suchar byteForwardCaseTwoTrueFalse(uchar byte);
 suchar byteForwardCaseTwoTrueTrue(uchar byte);
 sucharP ucharArrayMap(uchar (*function)(ZEDuchar),ulonglong count,ucharP array);
-suchar lhcaBackward();
-suchar lhcaForward();
+uchar lhcaBackward();
+uchar lhcaForward();
+uchar lhcaInitialize();
+uchar lhcaOne();
+uchar lhcaTwo();
+uchar lhcaThree();
+uchar lhcaFour();
+uchar lhcaFive();
+uchar lhcaSix();
+uchar lhcaSeven();
+uchar lhcaEight();
+uchar lhcaSeed(uchar one,uchar two,uchar three,uchar four,uchar five,uchar six,uchar seven,uchar eight);
 sulonglong ulonglongCastUchar(uchar character);
 suchar test1(uint count);
 suchar test2(uint count);
-
+ 
 REPLACE
-
+ 
 suchar bitBack(uchar bit0 , uchar bit1 , uchar byte){return(bit0)?((bit1)?(ZEDucharTableBackward(byte,ZEDbitTableBackwardCaseTwoTrueTrue)):(ZEDucharTableBackward(byte,ZEDbitTableBackwardCaseTwoTrueFalse))):((bit1)?(ZEDucharTableBackward(byte,ZEDbitTableBackwardCaseTwoFalseTrue)):(ZEDucharTableBackward(byte,ZEDbitTableBackwardCaseTwoFalseFalse)));}
 suchar bitBackwardCaseOneFalse(uchar byte){ucharP before=ZEDbitsByte(byte);ucharP after=ZEDbitsBackwardCaseOne(0,before);uchar result=ZEDucharArrayRef(9,after);free(before);free(after);return result;}
 suchar bitBackwardCaseOneTrue(uchar byte){ucharP before=ZEDbitsByte(byte);ucharP after=ZEDbitsBackwardCaseOne(1,before);uchar result=ZEDucharArrayRef(9,after);free(before);free(after);return result;}
@@ -95,14 +105,9 @@ suchar byteForwardCaseTwoFalseTrue(uchar byte){ucharP before=ZEDbitsByte(byte);u
 suchar byteForwardCaseTwoTrueFalse(uchar byte){ucharP before=ZEDbitsByte(byte);ucharP after=ZEDbitsForwardCaseTwo(1,0,before);uchar result=ZEDbyteBits(after);free(before);free(after);return result;}
 suchar byteForwardCaseTwoTrueTrue(uchar byte){ucharP before=ZEDbitsByte(byte);ucharP after=ZEDbitsForwardCaseTwo(1,1,before);uchar result=ZEDbyteBits(after);free(before);free(after);return result;}
 sucharP ucharArrayMap(uchar (*function)(uchar),ulonglong count,ucharP array){if(count==0) return array; else return ucharArrayMap(function,count-1,ucharArraySet(count,(*function)(ucharArrayRef(count,array)),array));}
-suchar lhcaBackward(){uchar bit0,bit1,bit2,bit3,bit4,bit5,bit6,bit7,bit8,byte1,byte2,byte3,byte4,byte5,byte6,byte7,byte8,result;result=(ZEDstate[0]>127);byte1=ZEDucharArrayRef(1+((ZEDulonglong)ZEDstate[0]),ZEDbyteTableBackwardCaseOneFalse);bit1=ZEDucharArrayRef(1+((ZEDulonglong)ZEDstate[0]),ZEDbitTableBackwardCaseOneFalse);bit0=(byte1%2);byte2=ZEDbyteBack(bit0,bit1,ZEDstate[1]);bit2=ZEDbitBack(bit0,bit1,ZEDstate[1]);bit0=(byte2%2);byte3=ZEDbyteBack(bit0,bit2,ZEDstate[2]);bit3=ZEDbitBack(bit0,bit2,ZEDstate[2]);bit0=(byte3%2);byte4=ZEDbyteBack(bit0,bit3,ZEDstate[3]);bit4=ZEDbitBack(bit0,bit3,ZEDstate[3]);bit0=(byte4%2);byte5=ZEDbyteBack(bit0,bit4,ZEDstate[4]);bit5=ZEDbitBack(bit0,bit4,ZEDstate[4]);bit0=(byte5%2);byte6=ZEDbyteBack(bit0,bit5,ZEDstate[5]);bit6=ZEDbitBack(bit0,bit5,ZEDstate[5]);bit0=(byte6%2);byte7=ZEDbyteBack(bit0,bit6,ZEDstate[6]);bit7=ZEDbitBack(bit0,bit6,ZEDstate[6]);bit0=(byte7%2);byte8=ZEDbyteBack(bit0,bit7,ZEDstate[7]);bit8=ZEDbitBack(bit0,bit7,ZEDstate[7]);if(bit8){byte1=ZEDucharArrayRef(1+((ZEDulonglong)ZEDstate[0]),ZEDbyteTableBackwardCaseOneTrue);bit1=ZEDucharArrayRef(1+((ZEDulonglong)ZEDstate[0]),ZEDbitTableBackwardCaseOneTrue);bit0=(byte1%2);byte2=ZEDbyteBack(bit0,bit1,ZEDstate[1]);bit2=ZEDbitBack(bit0,bit1,ZEDstate[1]);bit0=(byte2%2);byte3=ZEDbyteBack(bit0,bit2,ZEDstate[2]);bit3=ZEDbitBack(bit0,bit2,ZEDstate[2]);bit0=(byte3%2);byte4=ZEDbyteBack(bit0,bit3,ZEDstate[3]);bit4=ZEDbitBack(bit0,bit3,ZEDstate[3]);bit0=(byte4%2);byte5=ZEDbyteBack(bit0,bit4,ZEDstate[4]);bit5=ZEDbitBack(bit0,bit4,ZEDstate[4]);bit0=(byte5%2);byte6=ZEDbyteBack(bit0,bit5,ZEDstate[5]);bit6=ZEDbitBack(bit0,bit5,ZEDstate[5]);bit0=(byte6%2);byte7=ZEDbyteBack(bit0,bit6,ZEDstate[6]);bit7=ZEDbitBack(bit0,bit6,ZEDstate[6]);bit0=(byte7%2);byte8=ZEDbyteBack(bit0,bit7,ZEDstate[7]);bit8=ZEDbitBack(bit0,bit7,ZEDstate[7]);}ZEDstate[0]=byte1;ZEDstate[1]=byte2;ZEDstate[2]=byte3;ZEDstate[3]=byte4;ZEDstate[4]=byte5;ZEDstate[5]=byte6;ZEDstate[6]=byte7;ZEDstate[7]=byte8;return result;}
-suchar lhcaForward(){uchar one=ZEDbyteOneForward();uchar two=ZEDbyteTwoForward();uchar three=ZEDbyteThreeForward();uchar four=ZEDbyteFourForward();uchar five=ZEDbyteFiveForward();uchar six=ZEDbyteSixForward();uchar seven=ZEDbyteSevenForward();uchar eight=ZEDbyteEightForward();ZEDbyteOneSet(one);ZEDbyteTwoSet(two);ZEDbyteThreeSet(three);ZEDbyteFourSet(four);ZEDbyteFiveSet(five);ZEDbyteSixSet(six);ZEDbyteSevenSet(seven);ZEDbyteEightSet(eight);return one>127;}
-sulonglong ulonglongCastUchar(uchar character){return(ZEDulonglong)character;}
-suchar test1(uint count){if(count==0) {return(0);} else{printf("%d",ZEDlhcaForward());return test1(count-1);}}
-suchar test2(uint count){if(count==0) {return(0);} else{printf("%d",ZEDlhcaBackward());return test2(count-1);}}
- 
-uint main(void) {
-ZEDbitTableBackwardCaseOneFalse=ZEDbitsBackwardCaseOneFalse();
+uchar lhcaBackward(){uchar bit0,bit1,bit2,bit3,bit4,bit5,bit6,bit7,bit8,byte1,byte2,byte3,byte4,byte5,byte6,byte7,byte8,result;result=(ZEDstate[0]>127);byte1=ZEDucharArrayRef(1+((ZEDulonglong)ZEDstate[0]),ZEDbyteTableBackwardCaseOneFalse);bit1=ZEDucharArrayRef(1+((ZEDulonglong)ZEDstate[0]),ZEDbitTableBackwardCaseOneFalse);bit0=(byte1%2);byte2=ZEDbyteBack(bit0,bit1,ZEDstate[1]);bit2=ZEDbitBack(bit0,bit1,ZEDstate[1]);bit0=(byte2%2);byte3=ZEDbyteBack(bit0,bit2,ZEDstate[2]);bit3=ZEDbitBack(bit0,bit2,ZEDstate[2]);bit0=(byte3%2);byte4=ZEDbyteBack(bit0,bit3,ZEDstate[3]);bit4=ZEDbitBack(bit0,bit3,ZEDstate[3]);bit0=(byte4%2);byte5=ZEDbyteBack(bit0,bit4,ZEDstate[4]);bit5=ZEDbitBack(bit0,bit4,ZEDstate[4]);bit0=(byte5%2);byte6=ZEDbyteBack(bit0,bit5,ZEDstate[5]);bit6=ZEDbitBack(bit0,bit5,ZEDstate[5]);bit0=(byte6%2);byte7=ZEDbyteBack(bit0,bit6,ZEDstate[6]);bit7=ZEDbitBack(bit0,bit6,ZEDstate[6]);bit0=(byte7%2);byte8=ZEDbyteBack(bit0,bit7,ZEDstate[7]);bit8=ZEDbitBack(bit0,bit7,ZEDstate[7]);if(bit8){byte1=ZEDucharArrayRef(1+((ZEDulonglong)ZEDstate[0]),ZEDbyteTableBackwardCaseOneTrue);bit1=ZEDucharArrayRef(1+((ZEDulonglong)ZEDstate[0]),ZEDbitTableBackwardCaseOneTrue);bit0=(byte1%2);byte2=ZEDbyteBack(bit0,bit1,ZEDstate[1]);bit2=ZEDbitBack(bit0,bit1,ZEDstate[1]);bit0=(byte2%2);byte3=ZEDbyteBack(bit0,bit2,ZEDstate[2]);bit3=ZEDbitBack(bit0,bit2,ZEDstate[2]);bit0=(byte3%2);byte4=ZEDbyteBack(bit0,bit3,ZEDstate[3]);bit4=ZEDbitBack(bit0,bit3,ZEDstate[3]);bit0=(byte4%2);byte5=ZEDbyteBack(bit0,bit4,ZEDstate[4]);bit5=ZEDbitBack(bit0,bit4,ZEDstate[4]);bit0=(byte5%2);byte6=ZEDbyteBack(bit0,bit5,ZEDstate[5]);bit6=ZEDbitBack(bit0,bit5,ZEDstate[5]);bit0=(byte6%2);byte7=ZEDbyteBack(bit0,bit6,ZEDstate[6]);bit7=ZEDbitBack(bit0,bit6,ZEDstate[6]);bit0=(byte7%2);byte8=ZEDbyteBack(bit0,bit7,ZEDstate[7]);bit8=ZEDbitBack(bit0,bit7,ZEDstate[7]);}ZEDstate[0]=byte1;ZEDstate[1]=byte2;ZEDstate[2]=byte3;ZEDstate[3]=byte4;ZEDstate[4]=byte5;ZEDstate[5]=byte6;ZEDstate[6]=byte7;ZEDstate[7]=byte8;return result;}
+uchar lhcaForward(){uchar one=ZEDbyteOneForward();uchar two=ZEDbyteTwoForward();uchar three=ZEDbyteThreeForward();uchar four=ZEDbyteFourForward();uchar five=ZEDbyteFiveForward();uchar six=ZEDbyteSixForward();uchar seven=ZEDbyteSevenForward();uchar eight=ZEDbyteEightForward();ZEDbyteOneSet(one);ZEDbyteTwoSet(two);ZEDbyteThreeSet(three);ZEDbyteFourSet(four);ZEDbyteFiveSet(five);ZEDbyteSixSet(six);ZEDbyteSevenSet(seven);ZEDbyteEightSet(eight);return one>127;}
+uchar lhcaInitialize(){ZEDbitTableBackwardCaseOneFalse=ZEDbitsBackwardCaseOneFalse();
 ZEDbitTableBackwardCaseOneTrue=ZEDbitsBackwardCaseOneTrue();
 ZEDbitTableBackwardCaseTwoFalseFalse=ZEDbitsBackwardCaseTwoFalseFalse();
 ZEDbitTableBackwardCaseTwoFalseTrue=ZEDbitsBackwardCaseTwoFalseTrue();
@@ -120,9 +125,24 @@ ZEDbyteTableForwardCaseTwoFalseFalse=ZEDbytesForwardCaseTwoFalseFalse();
 ZEDbyteTableForwardCaseTwoFalseTrue=ZEDbytesForwardCaseTwoFalseTrue();
 ZEDbyteTableForwardCaseTwoTrueFalse=ZEDbytesForwardCaseTwoTrueFalse();
 ZEDbyteTableForwardCaseTwoTrueTrue=ZEDbytesForwardCaseTwoTrueTrue();
-ZEDstate=ZEDbytesState();
-test1(128*61);
+ZEDstate=ZEDbytesState();}
+uchar lhcaOne(){return ZEDstate[0];}
+uchar lhcaTwo(){return ZEDstate[1];}
+uchar lhcaThree(){return ZEDstate[2];}
+uchar lhcaFour(){return ZEDstate[3];}
+uchar lhcaFive(){return ZEDstate[4];}
+uchar lhcaSix(){return ZEDstate[5];}
+uchar lhcaSeven(){return ZEDstate[6];}
+uchar lhcaEight(){return ZEDstate[7];}
+uchar lhcaSeed(uchar one,uchar two,uchar three,uchar four,uchar five,uchar six,uchar seven,uchar eight){ZEDstate[0]=one;ZEDstate[1]=two;ZEDstate[2]=three;ZEDstate[3]=four;ZEDstate[4]=five;ZEDstate[5]=six;ZEDstate[6]=seven;ZEDstate[7]=eight;return 0;}
+sulonglong ulonglongCastUchar(uchar character){return(ZEDulonglong)character;}
+suchar test1(uint count){if(count==0) {return(0);} else{printf("%d",ZEDlhcaForward());return test1(count-1);}}
+suchar test2(uint count){if(count==0) {return(0);} else{printf("%d",ZEDlhcaBackward());return test2(count-1);}}
+ 
+int main() {
+lhcaInitialize();
+test1(256*61);
 printf("\n\n\n");
-test2(128*61);
+test2(256*61);
 return 0;
 }
