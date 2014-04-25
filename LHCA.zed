@@ -543,15 +543,65 @@ comment:
 #true
 (ucharArrayRef) (ulonglongAdd) 1 (ulonglongCastUchar) byte table
  
-(lhcaBackward) uchar
+(lhcaBackward) suchar
 comment:
 #true
 (001) "lhcaBackward"
  
-(lhcaForward) uchar
+(lhcaForward) suchar
 comment:
 #true
 (001) "lhcaForward"
+
+(lhcaInitialize) suchar
+comment:
+#true
+(001) "lhcaInitialize"
+
+(lhcaSeed) one two three four five six seven eight suchar uchar uchar uchar uchar uchar uchar uchar uchar
+comment:
+#true
+(009) "lhcaSeed" one two three four five six seven eight
+
+(lhcaOne) suchar
+comment:
+#true
+(001) "lhcaOne"
+
+(lhcaTwo) suchar
+comment:
+#true
+(001) "lhcaTwo"
+
+(lhcaThree) suchar
+comment:
+#true
+(001) "lhcaThree"
+
+(lhcaFour) suchar
+comment:
+#true
+(001) "lhcaFour"
+
+(lhcaFive) suchar
+comment:
+#true
+(001) "lhcaFive"
+
+(lhcaSix) suchar
+comment:
+#true
+(001) "lhcaSix"
+
+(lhcaSeven) suchar
+comment:
+#true
+(001) "lhcaSeven"
+
+(lhcaEight) suchar
+comment:
+#true
+(001) "lhcaEight"
  
 (ulonglongAdd) one two sulonglong ulonglong ulonglong
 comment:
@@ -562,3 +612,4 @@ comment:
 comment:
 #true
 (002) "ulonglongCastUchar" character
+ 
