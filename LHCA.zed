@@ -1,615 +1,554 @@
-(bitBack) bit0 bit1 byte suchar uchar uchar uchar
+(bitBack) bit0 bit1 byte uchar uchar uchar uchar
 comment:
 #true
 (004) "bitBack" bit0 bit1 byte
  
-(bitBackwardCaseOneFalse) byte suchar uchar
+(bitBackwardCaseOneFalse) byte uchar uchar
 comment:
 #true
 (002) "bitBackwardCaseOneFalse" byte
  
-(bitBackwardCaseOneTrue) byte suchar uchar
+(bitBackwardCaseOneTrue) byte uchar uchar
 comment:
 #true
 (002) "bitBackwardCaseOneTrue" byte
  
-(bitBackwardCaseTwoFalseFalse) byte suchar uchar
+(bitBackwardCaseTwoFalseFalse) byte uchar uchar
 comment:
 #true
 (002) "bitBackwardCaseTwoFalseFalse" byte
  
-(bitBackwardCaseTwoFalseTrue) byte suchar uchar
+(bitBackwardCaseTwoFalseTrue) byte uchar uchar
 comment:
 #true
 (002) "bitBackwardCaseTwoFalseTrue" byte
  
-(bitBackwardCaseTwoTrueFalse) byte suchar uchar
+(bitBackwardCaseTwoTrueFalse) byte uchar uchar
 comment:
 #true
 (002) "bitBackwardCaseTwoTrueFalse" byte
  
-(bitBackwardCaseTwoTrueTrue) byte suchar uchar
+(bitBackwardCaseTwoTrueTrue) byte uchar uchar
 comment:
 #true
 (002) "bitBackwardCaseTwoTrueTrue" byte
  
-(bitRule) rule one two three suchar uchar uchar uchar uchar
+(bitRule) rule one two three uchar uchar uchar uchar uchar
 comment:
 rule
 (bitRuleOneFifty) one two three
  
-(bitRule) rule one two three suchar uchar uchar uchar uchar
+(bitRule) rule one two three uchar uchar uchar uchar uchar
 comment:
 #true
 (bitRuleNinety) one two three
  
-(bitRuleNinety) one two three suchar uchar uchar uchar
+(bitRuleNinety) one two three uchar uchar uchar uchar
 comment:
 #true
 (bitXor) one three
  
-(bitRuleOneFifty) one two three suchar uchar uchar uchar
+(bitRuleOneFifty) one two three uchar uchar uchar uchar
 comment:
 #true
 (bitXor) two (bitXor) one three
  
-(bitsBackwardCaseOne) bit bits sucharP uchar ucharP
+(bitsBackwardCaseOne) bit bits ucharP uchar ucharP
 comment:
 #true
 (bitsBackwardCaseOne1) bit bits (ucharArrayNew) 9
  
-(bitsBackwardCaseOne1) bit input output sucharP uchar ucharP ucharP
+(bitsBackwardCaseOne1) bit input output ucharP uchar ucharP ucharP
 comment:
 #true
 (bitsBackwardCaseOne1a) input (ucharArraySet) 1 bit (ucharArraySet) 2 (bitRule) #false 0 bit (ucharArrayRef) 1 input output
  
-(bitsBackwardCaseOne1a) input output sucharP ucharP ucharP
+(bitsBackwardCaseOne1a) input output ucharP ucharP ucharP
 comment:
 #true
 (bitsBackwardCaseOne1b) input (ucharArraySet) 3 (bitRule) #false (ucharArrayRef) 1 output (ucharArrayRef) 2 output (ucharArrayRef) 2 input output
  
-(bitsBackwardCaseOne1b) input output sucharP ucharP ucharP
+(bitsBackwardCaseOne1b) input output ucharP ucharP ucharP
 comment:
 #true
 (bitsBackwardCaseOne1c) input (ucharArraySet) 4 (bitRule) #true (ucharArrayRef) 2 output (ucharArrayRef) 3 output (ucharArrayRef) 3 input output
  
-(bitsBackwardCaseOne1c) input output sucharP ucharP ucharP
+(bitsBackwardCaseOne1c) input output ucharP ucharP ucharP
 comment:
 #true
 (bitsBackwardCaseOne1d) input (ucharArraySet) 5 (bitRule) #false (ucharArrayRef) 3 output (ucharArrayRef) 4 output (ucharArrayRef) 4 input output
  
-(bitsBackwardCaseOne1d) input output sucharP ucharP ucharP
+(bitsBackwardCaseOne1d) input output ucharP ucharP ucharP
 comment:
 #true
 (bitsBackwardCaseOne1e) input (ucharArraySet) 6 (bitRule) #true (ucharArrayRef) 4 output (ucharArrayRef) 5 output (ucharArrayRef) 5 input output
  
-(bitsBackwardCaseOne1e) input output sucharP ucharP ucharP
+(bitsBackwardCaseOne1e) input output ucharP ucharP ucharP
 comment:
 #true
 (bitsBackwardCaseOne1f) input (ucharArraySet) 7 (bitRule) #false (ucharArrayRef) 5 output (ucharArrayRef) 6 output (ucharArrayRef) 6 input output
  
-(bitsBackwardCaseOne1f) input output sucharP ucharP ucharP
+(bitsBackwardCaseOne1f) input output ucharP ucharP ucharP
 comment:
 #true
 (bitsBackwardCaseOne1g) input (ucharArraySet) 8 (bitRule) #false (ucharArrayRef) 6 output (ucharArrayRef) 7 output (ucharArrayRef) 7 input output
  
-(bitsBackwardCaseOne1g) input output sucharP ucharP ucharP
+(bitsBackwardCaseOne1g) input output ucharP ucharP ucharP
 comment:
 #true
 (ucharArraySet) 9 (bitRule) #false (ucharArrayRef) 7 output (ucharArrayRef) 8 output (ucharArrayRef) 8 input output
  
-(bitsBackwardCaseOneFalse) sucharP
+(bitsBackwardCaseOneFalse) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbitBackwardCaseOneFalse" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(bitsBackwardCaseOneTrue) sucharP
+(bitsBackwardCaseOneTrue) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbitBackwardCaseOneTrue" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(bitsBackwardCaseTwo) bit1 bit2 bits sucharP uchar uchar ucharP
+(bitsBackwardCaseTwo) bit1 bit2 bits ucharP uchar uchar ucharP
 comment:
 #true
 (bitsBackwardCaseTwo1) bit1 bit2 bits (ucharArrayNew) 9
  
-(bitsBackwardCaseTwo1) bit1 bit2 input output sucharP uchar uchar ucharP ucharP
+(bitsBackwardCaseTwo1) bit1 bit2 input output ucharP uchar uchar ucharP ucharP
 comment:
 #true
 (bitsBackwardCaseTwo1a) input (ucharArraySet) 1 bit2 (ucharArraySet) 2 (bitRule) #false bit1 bit2 (ucharArrayRef) 1 input output
  
-(bitsBackwardCaseTwo1a) input output sucharP ucharP ucharP
+(bitsBackwardCaseTwo1a) input output ucharP ucharP ucharP
 comment:
 #true
 (bitsBackwardCaseTwo1b) input (ucharArraySet) 3 (bitRule) #false (ucharArrayRef) 1 output (ucharArrayRef) 2 output (ucharArrayRef) 2 input output
  
-(bitsBackwardCaseTwo1b) input output sucharP ucharP ucharP
+(bitsBackwardCaseTwo1b) input output ucharP ucharP ucharP
 comment:
 #true
 (bitsBackwardCaseTwo1c) input (ucharArraySet) 4 (bitRule) #false (ucharArrayRef) 2 output (ucharArrayRef) 3 output (ucharArrayRef) 3 input output
  
-(bitsBackwardCaseTwo1c) input output sucharP ucharP ucharP
+(bitsBackwardCaseTwo1c) input output ucharP ucharP ucharP
 comment:
 #true
 (bitsBackwardCaseTwo1d) input (ucharArraySet) 5 (bitRule) #false (ucharArrayRef) 3 output (ucharArrayRef) 4 output (ucharArrayRef) 4 input output
  
-(bitsBackwardCaseTwo1d) input output sucharP ucharP ucharP
+(bitsBackwardCaseTwo1d) input output ucharP ucharP ucharP
 comment:
 #true
 (bitsBackwardCaseTwo1e) input (ucharArraySet) 6 (bitRule) #false (ucharArrayRef) 4 output (ucharArrayRef) 5 output (ucharArrayRef) 5 input output
  
-(bitsBackwardCaseTwo1e) input output sucharP ucharP ucharP
+(bitsBackwardCaseTwo1e) input output ucharP ucharP ucharP
 comment:
 #true
 (bitsBackwardCaseTwo1f) input (ucharArraySet) 7 (bitRule) #false (ucharArrayRef) 5 output (ucharArrayRef) 6 output (ucharArrayRef) 6 input output
  
-(bitsBackwardCaseTwo1f) input output sucharP ucharP ucharP
+(bitsBackwardCaseTwo1f) input output ucharP ucharP ucharP
 comment:
 #true
 (bitsBackwardCaseTwo1g) input (ucharArraySet) 8 (bitRule) #false (ucharArrayRef) 6 output (ucharArrayRef) 7 output (ucharArrayRef) 7 input output
  
-(bitsBackwardCaseTwo1g) input output sucharP ucharP ucharP
+(bitsBackwardCaseTwo1g) input output ucharP ucharP ucharP
 comment:
 #true
 (ucharArraySet) 9 (bitRule) #false (ucharArrayRef) 7 output (ucharArrayRef) 8 output (ucharArrayRef) 8 input output
  
-(bitsBackwardCaseTwoFalseFalse) sucharP
+(bitsBackwardCaseTwoFalseFalse) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbitBackwardCaseTwoFalseFalse" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(bitsBackwardCaseTwoFalseTrue) sucharP
+(bitsBackwardCaseTwoFalseTrue) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbitBackwardCaseTwoFalseTrue" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(bitsBackwardCaseTwoTrueFalse) sucharP
+(bitsBackwardCaseTwoTrueFalse) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbitBackwardCaseTwoTrueFalse" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(bitsBackwardCaseTwoTrueTrue) sucharP
+(bitsBackwardCaseTwoTrueTrue) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbitBackwardCaseTwoTrueTrue" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(bitsByte) byte sucharP uchar
+(bitsByte) byte ucharP uchar
 comment:
 #true
 (bitsByte1) byte 1
  
-(bitsByte1) byte count sucharP uchar uchar
+(bitsByte1) byte count ucharP uchar uchar
 comment:
 "ZEDcount>8"
 (ucharArrayNew) 8
  
-(bitsByte1) byte count sucharP uchar uchar
+(bitsByte1) byte count ucharP uchar uchar
 comment:
 "ZEDbyte>127"
 (ucharArraySet) count #true (bitsByte1) "ZEDbyte<<1" "ZEDcount+1"
  
-(bitsByte1) byte count sucharP uchar uchar
+(bitsByte1) byte count ucharP uchar uchar
 comment:
 #true
 (ucharArraySet) count #false (bitsByte1) "ZEDbyte<<1" "ZEDcount+1"
  
-(bitsForwardCaseOne) leftBit rightBit bits sucharP uchar uchar ucharP
+(bitsForwardCaseOne) leftBit rightBit bits ucharP uchar uchar ucharP
 comment:
 #true
 (ucharArraySet) 1 (bitRule) #false leftBit (ucharArrayRef) 1 bits (ucharArrayRef) 2 bits (ucharArraySet) 2 (bitRule) #false (ucharArrayRef) 1 bits (ucharArrayRef) 2 bits (ucharArrayRef) 3 bits (ucharArraySet) 3 (bitRule) #true (ucharArrayRef) 2 bits (ucharArrayRef) 3 bits (ucharArrayRef) 4 bits (ucharArraySet) 4 (bitRule) #false (ucharArrayRef) 3 bits (ucharArrayRef) 4 bits (ucharArrayRef) 5 bits (ucharArraySet) 5 (bitRule) #true (ucharArrayRef) 4 bits (ucharArrayRef) 5 bits (ucharArrayRef) 6 bits (ucharArraySet) 6 (bitRule) #false (ucharArrayRef) 5 bits (ucharArrayRef) 6 bits (ucharArrayRef) 7 bits (ucharArraySet) 7 (bitRule) #false (ucharArrayRef) 6 bits (ucharArrayRef) 7 bits (ucharArrayRef) 8 bits (ucharArraySet) 8 (bitRule) #false (ucharArrayRef) 7 bits (ucharArrayRef) 8 bits rightBit (ucharArrayNew) 8
  
-(bitsForwardCaseTwo) leftBit rightBit bits sucharP uchar uchar ucharP
+(bitsForwardCaseTwo) leftBit rightBit bits ucharP uchar uchar ucharP
 comment:
 #true
 (ucharArraySet) 1 (bitRule) #false leftBit (ucharArrayRef) 1 bits (ucharArrayRef) 2 bits (ucharArraySet) 2 (bitRule) #false (ucharArrayRef) 1 bits (ucharArrayRef) 2 bits (ucharArrayRef) 3 bits (ucharArraySet) 3 (bitRule) #false (ucharArrayRef) 2 bits (ucharArrayRef) 3 bits (ucharArrayRef) 4 bits (ucharArraySet) 4 (bitRule) #false (ucharArrayRef) 3 bits (ucharArrayRef) 4 bits (ucharArrayRef) 5 bits (ucharArraySet) 5 (bitRule) #false (ucharArrayRef) 4 bits (ucharArrayRef) 5 bits (ucharArrayRef) 6 bits (ucharArraySet) 6 (bitRule) #false (ucharArrayRef) 5 bits (ucharArrayRef) 6 bits (ucharArrayRef) 7 bits (ucharArraySet) 7 (bitRule) #false (ucharArrayRef) 6 bits (ucharArrayRef) 7 bits (ucharArrayRef) 8 bits (ucharArraySet) 8 (bitRule) #false (ucharArrayRef) 7 bits (ucharArrayRef) 8 bits rightBit (ucharArrayNew) 8
  
-(bitXor) one two suchar uchar uchar
+(bitXor) one two uchar uchar uchar
 comment:
 #true
 "ZEDone!=ZEDtwo"
  
-(byteBack) bit0 bit1 byte suchar uchar uchar uchar
+(byteBack) bit0 bit1 byte uchar uchar uchar uchar
 comment:
 #true
 (004) "byteBack" bit0 bit1 byte
  
-(byteBackwardCaseOneFalse) byte suchar uchar
+(byteBackwardCaseOneFalse) byte uchar uchar
 comment:
 #true
 (002) "byteBackwardCaseOneFalse" byte
  
-(byteBackwardCaseOneTrue) byte suchar uchar
+(byteBackwardCaseOneTrue) byte uchar uchar
 comment:
 #true
 (002) "byteBackwardCaseOneTrue" byte
  
-(byteBackwardCaseTwoFalseFalse) byte suchar uchar
+(byteBackwardCaseTwoFalseFalse) byte uchar uchar
 comment:
 #true
 (002) "byteBackwardCaseTwoFalseFalse" byte
  
-(byteBackwardCaseTwoFalseTrue) byte suchar uchar
+(byteBackwardCaseTwoFalseTrue) byte uchar uchar
 comment:
 #true
 (002) "byteBackwardCaseTwoFalseTrue" byte
  
-(byteBackwardCaseTwoTrueFalse) byte suchar uchar
+(byteBackwardCaseTwoTrueFalse) byte uchar uchar
 comment:
 #true
 (002) "byteBackwardCaseTwoTrueFalse" byte
  
-(byteBackwardCaseTwoTrueTrue) byte suchar uchar
+(byteBackwardCaseTwoTrueTrue) byte uchar uchar
 comment:
 #true
 (002) "byteBackwardCaseTwoTrueTrue" byte
  
-(byteBits) bits suchar ucharP
+(byteBits) bits uchar ucharP
 comment:
 #true
 (byteBits1) bits 0 1
  
-(byteBits1) bits byte count suchar ucharP uchar uchar
+(byteBits1) bits byte count uchar ucharP uchar uchar
 comment:
 "ZEDcount==8"
 (ucharAdd) byte (ucharArrayRef) count bits
  
-(byteBits1) bits byte count suchar ucharP uchar uchar
+(byteBits1) bits byte count uchar ucharP uchar uchar
 comment:
 #true
 (byteBits1) bits (ucharShiftLeft) (ucharAdd) byte (ucharArrayRef) count bits "ZEDcount+1"
  
-(byteEightForward) suchar
+(byteEightForward) uchar
 comment:
 #true
 (byteTwoForward1) (byteSevenRef) (byteEightRef) 0
  
-(byteEightRef) suchar
+(byteEightRef) uchar
 comment:
 #true
 (ucharArrayRef) 8 state
  
-(byteEightSet) character sucharP uchar
+(byteEightSet) character ucharP uchar
 comment:
 #true
 (ucharArraySet) 8 character state
  
-(byteFiveForward) suchar
+(byteFiveForward) uchar
 comment:
 #true
 (byteTwoForward1) (byteFourRef) (byteFiveRef) (byteSixRef)
  
-(byteFiveRef) suchar
+(byteFiveRef) uchar
 comment:
 #true
 (ucharArrayRef) 5 state
  
-(byteFiveSet) character sucharP uchar
+(byteFiveSet) character ucharP uchar
 comment:
 #true
 (ucharArraySet) 5 character state
  
-(byteForwardCaseOneFalse) byte suchar uchar
+(byteForwardCaseOneFalse) byte uchar uchar
 comment:
 #true
 (002) "byteForwardCaseOneFalse" byte
  
-(byteForwardCaseOneTrue) byte suchar uchar
+(byteForwardCaseOneTrue) byte uchar uchar
 comment:
 #true
 (002) "byteForwardCaseOneTrue" byte
  
-(byteForwardCaseTwoFalseFalse) byte suchar uchar
+(byteForwardCaseTwoFalseFalse) byte uchar uchar
 comment:
 #true
 (002) "byteForwardCaseTwoFalseFalse" byte
  
-(byteForwardCaseTwoFalseTrue) byte suchar uchar
+(byteForwardCaseTwoFalseTrue) byte uchar uchar
 comment:
 #true
 (002) "byteForwardCaseTwoFalseTrue" byte
  
-(byteForwardCaseTwoTrueFalse) byte suchar uchar
+(byteForwardCaseTwoTrueFalse) byte uchar uchar
 comment:
 #true
 (002) "byteForwardCaseTwoTrueFalse" byte
  
-(byteForwardCaseTwoTrueTrue) byte suchar uchar
+(byteForwardCaseTwoTrueTrue) byte uchar uchar
 comment:
 #true
 (002) "byteForwardCaseTwoTrueTrue" byte
  
-(byteFourForward) suchar
+(byteFourForward) uchar
 comment:
 #true
 (byteTwoForward1) (byteThreeRef) (byteFourRef) (byteFiveRef)
  
-(byteFourRef) suchar
+(byteFourRef) uchar
 comment:
 #true
 (ucharArrayRef) 4 state
  
-(byteFourSet) character sucharP uchar
+(byteFourSet) character ucharP uchar
 comment:
 #true
 (ucharArraySet) 4 character state
  
-(byteOneForward) suchar
+(byteOneForward) uchar
 comment:
 #true
 (byteOneForward1) (byteOneRef) (byteTwoRef)
  
-(byteOneForward1) one two suchar uchar uchar
+(byteOneForward1) one two uchar uchar uchar
 comment:
 "ZEDtwo>127"
 (ucharArrayRef) "ZEDone+1" byteTableForwardCaseOneTrue
  
-(byteOneForward1) one two suchar uchar uchar
+(byteOneForward1) one two uchar uchar uchar
 comment:
 #true
 (ucharArrayRef) "ZEDone+1" byteTableForwardCaseOneFalse
  
-(byteOneRef) suchar
+(byteOneRef) uchar
 comment:
 #true
 (ucharArrayRef) 1 state
  
-(byteOneSet) character sucharP uchar
+(byteOneSet) character ucharP uchar
 comment:
 #true
 (ucharArraySet) 1 character state
  
-(bytesBackwardCaseOneFalse) sucharP
+(bytesBackwardCaseOneFalse) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbyteBackwardCaseOneFalse" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(bytesBackwardCaseOneTrue) sucharP
+(bytesBackwardCaseOneTrue) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbyteBackwardCaseOneTrue" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(bytesBackwardCaseTwoFalseFalse) sucharP
+(bytesBackwardCaseTwoFalseFalse) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbyteBackwardCaseTwoFalseFalse" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(bytesBackwardCaseTwoFalseTrue) sucharP
+(bytesBackwardCaseTwoFalseTrue) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbyteBackwardCaseTwoFalseTrue" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(bytesBackwardCaseTwoTrueFalse) sucharP
+(bytesBackwardCaseTwoTrueFalse) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbyteBackwardCaseTwoTrueFalse" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(bytesBackwardCaseTwoTrueTrue) sucharP
+(bytesBackwardCaseTwoTrueTrue) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbyteBackwardCaseTwoTrueTrue" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(byteSevenForward) suchar
+(byteSevenForward) uchar
 comment:
 #true
 (byteTwoForward1) (byteSixRef) (byteSevenRef) (byteEightRef)
  
-(byteSevenRef) suchar
+(byteSevenRef) uchar
 comment:
 #true
 (ucharArrayRef) 7 state
  
-(byteSevenSet) character sucharP uchar
+(byteSevenSet) character ucharP uchar
 comment:
 #true
 (ucharArraySet) 7 character state
  
-(bytesForwardCaseOneFalse) sucharP
+(bytesForwardCaseOneFalse) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbyteForwardCaseOneFalse" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(bytesForwardCaseOneTrue) sucharP
+(bytesForwardCaseOneTrue) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbyteForwardCaseOneTrue" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(bytesForwardCaseTwoFalseFalse) sucharP
+(bytesForwardCaseTwoFalseFalse) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbyteForwardCaseTwoFalseFalse" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(bytesForwardCaseTwoFalseTrue) sucharP
+(bytesForwardCaseTwoFalseTrue) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbyteForwardCaseTwoFalseTrue" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(bytesForwardCaseTwoTrueFalse) sucharP
+(bytesForwardCaseTwoTrueFalse) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbyteForwardCaseTwoTrueFalse" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(bytesForwardCaseTwoTrueTrue) sucharP
+(bytesForwardCaseTwoTrueTrue) ucharP
 comment:
 #true
 (004) "ucharArrayMap" "&ZEDbyteForwardCaseTwoTrueTrue" 256 (ucharArrayPrepare) 256 (ucharArrayNew) 256
  
-(byteSixForward) suchar
+(byteSixForward) uchar
 comment:
 #true
 (byteTwoForward1) (byteFiveRef) (byteSixRef) (byteSevenRef)
  
-(byteSixRef) suchar
+(byteSixRef) uchar
 comment:
 #true
 (ucharArrayRef) 6 state
  
-(byteSixSet) character sucharP uchar
+(byteSixSet) character ucharP uchar
 comment:
 #true
 (ucharArraySet) 6 character state
  
-(bytesState) sucharP
+(bytesState) ucharP
 comment:
 #true
 (ucharArraySet) 1 #1 (ucharArraySet) 2 #2 (ucharArraySet) 3 #2 (ucharArraySet) 4 #7 (ucharArraySet) 5 #1 (ucharArraySet) 6 #9 (ucharArraySet) 7 #7 (ucharArraySet) 8 #6 (ucharArrayNew) 8
  
-(byteThreeForward) suchar
+(byteThreeForward) uchar
 comment:
 #true
 (byteTwoForward1) (byteTwoRef) (byteThreeRef) (byteFourRef)
  
-(byteThreeRef) suchar
+(byteThreeRef) uchar
 comment:
 #true
 (ucharArrayRef) 3 state
  
-(byteThreeSet) character sucharP uchar
+(byteThreeSet) character ucharP uchar
 comment:
 #true
 (ucharArraySet) 3 character state
  
-(byteTwoForward) suchar
+(byteTwoForward) uchar
 comment:
 #true
 (byteTwoForward1) (byteOneRef) (byteTwoRef) (byteThreeRef)
  
-(byteTwoForward1) one two three suchar uchar uchar uchar
+(byteTwoForward1) one two three uchar uchar uchar uchar
 comment:
 "ZEDone%2&&ZEDthree>127"
 (ucharArrayRef) "ZEDtwo+1" byteTableForwardCaseTwoTrueTrue
  
-(byteTwoForward1) one two three suchar uchar uchar uchar
+(byteTwoForward1) one two three uchar uchar uchar uchar
 comment:
 "ZEDthree>127"
 (ucharArrayRef) "ZEDtwo+1" byteTableForwardCaseTwoFalseTrue
  
-(byteTwoForward1) one two three suchar uchar uchar uchar
+(byteTwoForward1) one two three uchar uchar uchar uchar
 comment:
 "ZEDone%2==1"
 (ucharArrayRef) "ZEDtwo+1" byteTableForwardCaseTwoTrueFalse
  
-(byteTwoForward1) one two three suchar uchar uchar uchar
+(byteTwoForward1) one two three uchar uchar uchar uchar
 comment:
 #true
 (ucharArrayRef) "ZEDtwo+1" byteTableForwardCaseTwoFalseFalse
  
-(byteTwoRef) suchar
+(byteTwoRef) uchar
 comment:
 #true
 (ucharArrayRef) 2 state
  
-(byteTwoSet) character sucharP uchar
+(byteTwoSet) character ucharP uchar
 comment:
 #true
 (ucharArraySet) 2 character state
  
-(ucharAdd) one two suchar uchar uchar
+(ucharAdd) one two uchar uchar uchar
 comment:
 #true
 "ZEDone+ZEDtwo"
  
-(ucharArrayNew) size sucharP ulonglong
+(ucharArrayNew) size ucharP ulonglong
 comment:
 #true
 (002) "ucharArrayNew" size
  
-(ucharArrayPrepare) size array sucharP ulonglong ucharP
+(ucharArrayPrepare) size array ucharP ulonglong ucharP
 comment:
 "ZEDsize==0"
 array
  
-(ucharArrayPrepare) size array sucharP ulonglong ucharP
+(ucharArrayPrepare) size array ucharP ulonglong ucharP
 comment:
 #true
 (ucharArrayPrepare) "ZEDsize-1" (ucharArraySet) size "ZEDsize-1" array
  
-(ucharArrayRef) index array suchar ulonglong ucharP
+(ucharArrayRef) index array uchar ulonglong ucharP
 comment:
 #true
 (003) "ucharArrayRef" index array
  
-(ucharArraySet) index character array sucharP ulonglong uchar ucharP
+(ucharArraySet) index character array ucharP ulonglong uchar ucharP
 comment:
 #true
 (004) "ucharArraySet" index character array
  
-(ucharShiftLeft) character suchar uchar
+(ucharShiftLeft) character uchar uchar
 comment:
 #true
 "ZEDcharacter<<1"
  
-(ucharTableBackward) byte table suchar uchar ucharP
+(ucharTableBackward) byte table uchar uchar ucharP
 comment:
 #true
 (ucharArrayRef) (ulonglongAdd) 1 (ulonglongCastUchar) byte table
  
-(lhcaBackward) suchar
-comment:
-#true
-(001) "lhcaBackward"
- 
-(lhcaForward) suchar
-comment:
-#true
-(001) "lhcaForward"
-
-(lhcaInitialize) suchar
-comment:
-#true
-(001) "lhcaInitialize"
-
-(lhcaSeed) one two three four five six seven eight suchar uchar uchar uchar uchar uchar uchar uchar uchar
-comment:
-#true
-(009) "lhcaSeed" one two three four five six seven eight
-
-(lhcaOne) suchar
-comment:
-#true
-(001) "lhcaOne"
-
-(lhcaTwo) suchar
-comment:
-#true
-(001) "lhcaTwo"
-
-(lhcaThree) suchar
-comment:
-#true
-(001) "lhcaThree"
-
-(lhcaFour) suchar
-comment:
-#true
-(001) "lhcaFour"
-
-(lhcaFive) suchar
-comment:
-#true
-(001) "lhcaFive"
-
-(lhcaSix) suchar
-comment:
-#true
-(001) "lhcaSix"
-
-(lhcaSeven) suchar
-comment:
-#true
-(001) "lhcaSeven"
-
-(lhcaEight) suchar
-comment:
-#true
-(001) "lhcaEight"
- 
-(ulonglongAdd) one two sulonglong ulonglong ulonglong
+(ulonglongAdd) one two ulonglong ulonglong ulonglong
 comment:
 #true
 "ZEDone+ZEDtwo"
  
-(ulonglongCastUchar) character sulonglong uchar
+(ulonglongCastUchar) character ulonglong uchar
 comment:
 #true
 (002) "ulonglongCastUchar" character
- 
