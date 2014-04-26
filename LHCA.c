@@ -67,7 +67,7 @@ uchar lhcaSeed(uchar one,uchar two,uchar three,uchar four,uchar five,uchar six,u
 ulonglong ulonglongCastUchar(uchar character);
 uchar test1(uint count);
 uchar test2(uint count);
- 
+
 REPLACE
  
 uchar bitBack(uchar bit0 , uchar bit1 , uchar byte){return(bit0)?((bit1)?(ZEDucharTableBackward(byte,ZEDbitTableBackwardCaseTwoTrueTrue)):(ZEDucharTableBackward(byte,ZEDbitTableBackwardCaseTwoTrueFalse))):((bit1)?(ZEDucharTableBackward(byte,ZEDbitTableBackwardCaseTwoFalseTrue)):(ZEDucharTableBackward(byte,ZEDbitTableBackwardCaseTwoFalseFalse)));}
@@ -104,8 +104,8 @@ uchar lhcaSeven(){return ZEDstate[6];}
 uchar lhcaEight(){return ZEDstate[7];}
 uchar lhcaSeed(uchar one,uchar two,uchar three,uchar four,uchar five,uchar six,uchar seven,uchar eight){ZEDstate[0]=one;ZEDstate[1]=two;ZEDstate[2]=three;ZEDstate[3]=four;ZEDstate[4]=five;ZEDstate[5]=six;ZEDstate[6]=seven;ZEDstate[7]=eight;return 0;}
 ulonglong ulonglongCastUchar(uchar character){return(ZEDulonglong)character;}
-uchar test1(uint count){if(count==0) {return(0);} else{printf("%d",ZEDlhcaForward());return test1(count-1);}}
-uchar test2(uint count){if(count==0) {return(0);} else{printf("%d",ZEDlhcaBackward());return test2(count-1);}}
+uchar test1(uint count){if(count==0) {return(0);} else{printf("%d",lhcaForward());return test1(count-1);}}
+uchar test2(uint count){if(count==0) {return(0);} else{printf("%d",lhcaBackward());return test2(count-1);}}
  
 int main() {
 lhcaInitialize();
