@@ -1,4 +1,11 @@
-#include "MACRO.m"
+#include "MACRO.h"
+
+typedef unsigned char uchar;
+typedef unsigned int uint;
+typedef unsigned long long ulonglong;
+DEFINE_ZED_TYPE(uchar)
+DEFINE_ZED_TYPE(uint)
+DEFINE_ZED_TYPE(ulonglong)
 
 @interface LHCA : NSObject
 {ucharP state;}
